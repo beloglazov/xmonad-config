@@ -6,16 +6,16 @@ This is my configuration of the awesome tiling window manager
 - Support for a tree-column layout
 - smartBorders: the borders are automatically hidden when there is only one
   window
-- M-a displays the current time on top using `dzen2`
-- M-p launches `dmenu`
-- S-M-a kills the current window
-- M-<Insert> mutes the sound
-- M-<PageUp> increases the volume
-- M-<PageDown> decreases the volume
-- M-z/x/c/v/b switch between the first 5 workspace (easier to press then 1-5)
-- S-M-F10 locks the screen using `slock`
-- S-M-F11 reboots the system
-- S-M-F12 shuts down the system
+- `M-a` displays the current time on top using `dzen2`
+- `M-p` launches `dmenu`
+- `S-M-a` kills the current window
+- `M-<Insert>` mutes the sound
+- `M-<PageUp>` increases the volume
+- `M-<PageDown>` decreases the volume
+- `M-z/x/c/v/b` switch between the first 5 workspace (easier to press then 1-5)
+- `S-M-F10` locks the screen using `slock`
+- `S-M-F11` reboots the system
+- `S-M-F12` shuts down the system
 
 Enjoy! :)
 
