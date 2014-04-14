@@ -63,8 +63,9 @@ main = do
                  , ((myModMask .|. shiftMask, xK_F10), 	 spawn "slock")
                  , ((myModMask .|. shiftMask, xK_F11), 	 spawn "reboot")
                  , ((myModMask .|. shiftMask, xK_F12), 	 spawn "shutdown")
-                 , ((myModMask, xK_s), screenWorkspace 1 >>= flip whenJust (windows . W.view))
-                 , ((myModMask, xK_d), screenWorkspace 0 >>= flip whenJust (windows . W.view))
+                 , ((myModMask, xK_s), screenWorkspace 0 >>= flip whenJust (windows . W.view))
+                 , ((myModMask, xK_d), screenWorkspace 1 >>= flip whenJust (windows . W.view))
+                 , ((myModMask, xK_f), screenWorkspace 2 >>= flip whenJust (windows . W.view))
                  ]
                 `additionalKeysP`
                  [ ("M-S-a", kill)
