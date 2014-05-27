@@ -2,6 +2,8 @@ import XMonad
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.EwmhDesktops
+import XMonad.Hooks.ICCCMFocus
+import XMonad.Hooks.SetWMName
 import XMonad.Layout.NoBorders
 import XMonad.Layout.ThreeColumns
 import XMonad.Util.Run(spawnPipe)
@@ -32,6 +34,8 @@ main = do
 		, normalBorderColor  = "#0c0d0e"
 		, focusedBorderColor = "#333333"
 		, handleEventHook    = fullscreenEventHook
+        , startupHook        = setWMName "LG3D"
+        , logHook            = takeTopFocus
 		}
 		`additionalKeys`
                  [ ((myModMask, xK_a), spawn "date +'%c' | dzen2 -p 2 -fn '-*-terminus-bold-*-*-*-28-*-*-*-*-*-*-*' -bg '#0c0d0e' -fg '#7f8f9f'")
