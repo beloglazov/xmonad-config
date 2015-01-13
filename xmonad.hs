@@ -38,7 +38,7 @@ main = do
         , logHook            = takeTopFocus
 		}
 		`additionalKeys`
-                 [ ((myModMask, xK_a), spawn "date +'%c' | dzen2 -p 2 -fn '-*-terminus-bold-*-*-*-28-*-*-*-*-*-*-*' -bg '#0c0d0e' -fg '#7f8f9f'")
+                 [ ((0, xK_F1), spawn "date +'%c' | dzen2 -p 2 -fn '-*-terminus-bold-*-*-*-28-*-*-*-*-*-*-*' -bg '#0c0d0e' -fg '#7f8f9f'")
                  , ((myModMask, xK_w), spawn "acpi -b | dzen2 -p 2 -fn '-*-terminus-bold-*-*-*-28-*-*-*-*-*-*-*' -bg '#0c0d0e' -fg '#7f8f9f'")
                  , ((myModMask, xK_e), spawn "wmctrl -a eclipse")
                  , ((myModMask, xK_p), spawn "dmenu-run")
@@ -67,9 +67,9 @@ main = do
                  , ((myModMask .|. shiftMask, xK_F10), 	 spawn "slock")
                  , ((myModMask .|. shiftMask, xK_F11), 	 spawn "reboot")
                  , ((myModMask .|. shiftMask, xK_F12), 	 spawn "shutdown")
+                 , ((myModMask, xK_a), screenWorkspace 2 >>= flip whenJust (windows . W.view))
                  , ((myModMask, xK_s), screenWorkspace 0 >>= flip whenJust (windows . W.view))
                  , ((myModMask, xK_d), screenWorkspace 1 >>= flip whenJust (windows . W.view))
-                 , ((myModMask, xK_f), screenWorkspace 2 >>= flip whenJust (windows . W.view))
                  ]
                 `additionalKeysP`
                  [ ("M-S-a", kill)
